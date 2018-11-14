@@ -12,7 +12,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md">
             <div class="card">
                 <h5 class="card-header">
                     Burgers to be devoured
@@ -21,8 +21,8 @@
                     <ul>
                     {{#each burgers}}
                        {{#unless devoured}}
-                          <p>{{id}}. {{burger_name}}</p>
-                          <button class="devoured" data-id="{{id}}">EAT ME</button>
+                          <p>{{id}}. {{burger_name}} <button class="devoured btn btn-primary" data-id="{{id}}">EAT ME</button> </p>
+                          
                         {{/unless}}
                     {{/each}}
                     </ul>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md">
             <div class="card">
                 <h5 class="card-header">
                     Burgers to be devoured
@@ -57,7 +57,7 @@
                     <label for="Burger">Type Of Burger:</label>
                     <input type="text" id="burger" name="name">
                 </div>
-                <button type="submit">Burger</button>
+                <button type="submit" class="btn btn-primary">Burger</button>
             </form>
         </div>
     </div>
