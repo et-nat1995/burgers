@@ -3,8 +3,14 @@ var connection;
 
 // Have to update this to allow for heroku stuff to work
 console.log()
-if(process.env.JAWSDB_URL){
-	connection = mysql.createConnection(process.env.JAWSBD_URL);
+if(process.env.NODE_ENV === "production"){
+	connection = mysql.createConnection({
+		host: "sulnwdk5uwjw1r2k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+		port: "3306",
+		user: "facxqg7z5plho4gd",
+		password: "gjqhnn15vbxn9tsx",
+		database: "tprzqdresan11zdj"
+	});
 }
 else{
 	connection = mysql.createConnection({
