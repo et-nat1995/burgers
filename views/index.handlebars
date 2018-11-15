@@ -4,7 +4,7 @@
 
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-4">Lets Eat Some Burger's</h1>
+                    <h1 class="display-4" style="text-alaign: center">Lets Eat Some Burger's</h1>
                 </div>
             </div>
             
@@ -13,7 +13,7 @@
 
     <div class="row">
         <div class="col-md">
-            <div class="card">
+            <div class="card text-white bg-primary">
                 <h5 class="card-header">
                     Burgers to be devoured
                 </h5>
@@ -21,7 +21,7 @@
                     <ul>
                     {{#each burgers}}
                        {{#unless devoured}}
-                          <p>{{id}}. {{burger_name}} <button class="devoured btn btn-primary" data-id="{{id}}">EAT ME</button> </p>
+                          <p>{{id}}. {{burger_name}} <button class="devoured btn btn-danger" data-id="{{id}}">EAT ME</button> </p>
                           
                         {{/unless}}
                     {{/each}}
@@ -31,9 +31,9 @@
         </div>
 
         <div class="col-md">
-            <div class="card">
+            <div class="card text-white bg-danger mb-3">
                 <h5 class="card-header">
-                    Burgers to be devoured
+                    Burgers Devoured
                 </h5>
                 <div class="card-body">
                     <ul>
@@ -50,15 +50,26 @@
 
     <div class="row">
         <div class="col-md">
-            <h2>Add a Burger</h2>
-            <form class="create-form">
-
-                <div class="form-group">
-                    <label for="Burger">Type Of Burger:</label>
-                    <input type="text" id="burger" name="name">
+            <div class="card">
+                <h4 class="card-header">
+                    Add a Burger
+                </h4>
+                <div class="card-body">
+                    <form class="create-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Burger">Type Of Burger:</label>
+                                    <input type="text" id="burger" name="name" style="width: 75%; margin-top: 5px">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <button type="submit" class="btn btn-primary" style="width: 100%">Burger</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <button type="submit" class="btn btn-primary">Burger</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
