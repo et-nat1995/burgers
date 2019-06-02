@@ -18,12 +18,16 @@ $(function(){
         event.preventDefault();
 
         var id = $(this).data("id");
+        $(this).remove();
 
         $.ajax("/api/devoured/" + id,{
             method: "PUT"
         }).then(function(){
+            let dataDelete = $("[data-id-delete="+ id +"]");
+            let placeToAdded = $(".addDeletedHere");
+            dataDelete.clone().appendTo(placeToAdded);
+            dataDelete.remove();
             console.log("You Fat Ass, you ate the burger...");
-            location.reload();
         })
     })
 });

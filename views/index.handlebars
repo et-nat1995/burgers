@@ -21,7 +21,7 @@
                     <ul>
                     {{#each burgers}}
                        {{#unless devoured}}
-                          <p>{{id}}. {{burger_name}} <button class="devoured btn btn-danger" data-id="{{id}}">EAT ME</button> </p>
+                          <p data-id-delete={{id}}>{{id}}. {{burger_name}} <button class="devoured btn btn-danger" data-id="{{id}}">EAT ME</button> </p>
                           
                         {{/unless}}
                     {{/each}}
@@ -36,7 +36,7 @@
                     Burgers Devoured
                 </h5>
                 <div class="card-body">
-                    <ul>
+                    <ul class="addDeletedHere">
                     {{#each burgers}}
                         {{#if devoured}}
                             <p>{{id}}. {{burger_name}}</p>
